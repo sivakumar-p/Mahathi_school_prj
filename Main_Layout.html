@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<title>Temperate Forest</title>
+<style>
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav article article"
+    "footer footer footer";
+  grid-template-rows: 70px 1fr 20px;  
+  grid-template-columns: 15% 1fr 15%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  }  
+header, footer, article, nav, div {
+  padding: .2em;
+  background: gold;
+  }
+  
+  article, div {
+  padding: 1.2em;
+ 
+  }
+#pageHeader {
+  grid-area: header;
+   text-align: center;
+   font-size: 40px;
+   color:blue;
+  }
+#pageFooter {
+  grid-area: footer;
+   text-align: center
+  }
+#mainArticle { 
+  grid-area: article;
+
+  }
+#mainNav { 
+  grid-area: nav; 
+  font-size: 20px;
+  text-align: left;  
+  }
+li { 
+ padding-top: 15px;  
+  }
+
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"      
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 20px;  
+    grid-template-columns: 1fr;
+ }
+}
+</style>
+<body>
+  <header id="pageHeader" >Temperate Forest</header>
+  <article id="mainArticle">
+		<iframe id="MypageFrame" width="100%" height="100%" src="Files/TemperateForest.html" style="mainArticle  width: 100%;
+  height: 75vh;" title="Iframe Example"></iframe>
+  </article>
+  <nav id="mainNav">
+  <ul>
+      <li><a href="#" onclick="MyPage('Monarchbutterfly')" >Monarch butterfly </a></li>
+      <li><a href="#" onclick="MyPage('Redpanda')" >Red panda</a></li>
+      <li><a href="#" onclick="MyPage('Magnolia')">Magnolia</a></li>
+      <li><a href="#" onclick="MyPage('WhiteTaileddeer')">White Tailed deer</a></li>
+      <li><a href="#" onclick="MyPage('Snowshoehare')">Snowshoe hare</a></li>
+      <li><a href="#" onclick="MyPage('Snowyowls')">Snowy owls </a></li>
+      <li><a href="#" onclick="MyPage('Redfox')">Red fox</a></li>
+      <li><a href="#" onclick="MyPage('Primrose')">Primrose</a></li>
+      <li><a href="#" onclick="MyPage('Ladybug')">Lady bug</a></li>
+    </ul>
+  </nav>
+ 
+  <footer id="pageFooter"></footer>
+</body>
+<script>
+function MyPage(pageid) {
+   if (pageid=="Monarchbutterfly")
+   {
+		document.getElementById("MypageFrame").src = "Files/Monarch_butterfly.html";		
+   }
+   else if (pageid=="Redpanda")
+       document.getElementById("MypageFrame").src = "Files/Red_Panda.html";
+   else if (pageid=="Magnolia")
+       document.getElementById("MypageFrame").src = "Files/Magnolia.html";
+	else if (pageid=="WhiteTaileddeer")
+       document.getElementById("MypageFrame").src = "Files/White_Tailed_deer.html";
+	else if (pageid=="Snowshoehare")
+       document.getElementById("MypageFrame").src = "Files/Snowshoe_hare.html";
+	else if (pageid=="Snowyowls")
+       document.getElementById("MypageFrame").src = "Files/Snowyowls.html";
+	else if (pageid=="Redfox")
+       document.getElementById("MypageFrame").src = "Files/Red_Fox.html";
+	else if (pageid=="Primrose")
+       document.getElementById("MypageFrame").src = "Files/Primrose.html";
+	else if (pageid=="Ladybug")
+       document.getElementById("MypageFrame").src = "Files/Lady_bug.html";
+}
+</script>
+</html>
